@@ -1,0 +1,21 @@
+@ReactApp1.Server_HostAddress = http://localhost:5234
+
+GET {{ReactApp1.Server_HostAddress}}/api/Item
+Accept: application/json
+
+###
+
+GET {{ReactApp1.Server_HostAddress}}/api/item/1
+Accept: application/json
+
+###
+
+GET {{ReactApp1.Server_HostAddress}}/api/item/byid/1
+Accept: application/json
+
+###
+
+GET {{ReactApp1.Server_HostAddress}}/api/item/bytype/1
+Accept: application/json
+
+###
