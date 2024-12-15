@@ -19,7 +19,6 @@ const RankItems = () => {
     return (
         <>
             <main>
-
                 <p>List titles</p>
                 <div className="items-not-ranked">
                     {
