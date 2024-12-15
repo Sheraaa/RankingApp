@@ -6,6 +6,39 @@
     font-family: Arial, sans-serif;
 }
 
+main {
+    display: flex;
+    align-items: flex-start; /* Aligne les éléments au début verticalement */
+    flex-direction: column; /* Empile les éléments en colonne */
+    width: 100%; /* Assurez-vous que le conteneur prend toute la largeur */
+    gap: 16px; /* Ajoutez un espacement entre les éléments */
+    margin-top: 40px; /* Crée un espace en dessous de la navbar */
+}
+
+header {
+    position: fixed; /* Fixe la navbar en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garde la navbar au-dessus du reste */
+    background-color: white; /* Optionnel pour une couleur de fond */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+}
+
+.rank-row {
+    display: flex;
+    justify-content: space-between; /* Espacement entre les cellules */
+    margin: 10px 0; /* Espacement vertical entre les lignes */
+    height: 40px; /* Ajuste la hauteur de chaque ligne */
+}
+
+.row-label {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+
 th, td {
     padding: 0.5rem 1rem;
     border: 1px solid #ddd;
@@ -22,20 +55,20 @@ p {
     margin-right: auto;
 }
 
-    /* Options supplémentaires pour améliorer la lisibilité */
-    p:first-of-type {
-        margin-top: 1rem;
-    }
+/* Options supplémentaires pour améliorer la lisibilité */
+p:first-of-type {
+    margin-top: 1rem;
+}
 
-    p strong {
-        color: #000;
-        font-weight: bold;
-    }
+p strong {
+    color: #000;
+    font-weight: bold;
+}
 
-    p em {
-        font-style: italic;
-        color: #666;
-    }
+p em {
+    font-style: italic;
+    color: #666;
+}
 
 .items-not-ranked {
     display: flex;
@@ -55,15 +88,59 @@ p {
     border-radius: 5px; /* Arrondit légèrement les coins */
 }
 
-    .unranked-cell img {
-        width: 100%;
-        height: auto; /* Maintient le ratio d'aspect pour éviter les déformations */
-        border-radius: 5px; /* Applique le même arrondi que le conteneur */
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile aux images */
-    }
+.unranked-cell img, .rank-cell img{
+    width: 100%;
+    height: auto; /* Maintient le ratio d'aspect pour éviter les déformations */
+    border-radius: 5px; /* Applique le même arrondi que le conteneur */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile aux images */
+}
 
 /* App.css ou ton fichier CSS global */
 img {
     width: 150px; /* Ajuste la largeur à 150px (ou toute autre taille que tu souhaites) */
     height: auto; /* Conserve les proportions de l'image */
+}
+
+.rankings{
+    width:800px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-self: center;
+    margin-bottom: 15px;
+    gap:5px;
+}
+
+.rank-cell {
+    height: 90px; /* Ajuste la taille */
+    width: 70px; /* Ajuste la taille */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px; /* Espacement entre les cellules */
+    background-color: rgba(0, 123, 255, 0.1); /* Fond léger */
+}
+
+
+.rank-row{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4px;
+}
+
+.top-tier{
+    background-color: yellow;
+}
+
+.middle-tier {
+    background-color: greenyellow;
+}
+
+.bottom-tier {
+    background-color: brown;
+}
+
+.worst-tier {
+    background-color: red;
 }
